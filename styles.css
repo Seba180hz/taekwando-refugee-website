@@ -1,0 +1,274 @@
+/* ---------------------------------------------------
+   DESIGN SYSTEM
+--------------------------------------------------- */
+
+:root {
+    --color-red: #C1002A;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+
+    --color-gray-light: #F0F0F7;
+    --color-gray-placeholder: #D9D9D9;
+
+    --bg-nav: #C1002A;
+    --bg-hero: #000000;
+    --bg-ausgangslage: #F0F0F7;
+    --bg-ziel: #FFFFFF;
+    --bg-ethik: #F0F0F7;
+    --bg-newsletter: #C1002A;
+    --bg-benefits-athleten: #F0F0F7;
+    --bg-benefits-ch: #FFFFFF;
+    --bg-partners: #C1002A;
+    --bg-footer: #000000;
+
+    --font-title: 3.2rem;
+    --font-subtitle: 2rem;
+    --font-section-title: 2.4rem;
+    --font-body: 1.1rem;
+
+    --space-section: 100px;
+    --space-inner: 40px;
+
+    --max-width: 1200px;
+}
+
+/* ---------------------------------------------------
+   GLOBAL
+--------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--color-white);
+    color: var(--color-black);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-inner);
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+section {
+    padding: var(--space-section) 0;
+}
+
+section h2 {
+    font-size: var(--font-section-title);
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------
+   NAVIGATION
+--------------------------------------------------- */
+
+header {
+    background: var(--bg-nav);
+    padding: 20px 0;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    font-weight: 600;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--color-black);
+}
+
+/* ---------------------------------------------------
+   HERO – EXTREM VIEL MEHR ABSTAND UNTEN
+--------------------------------------------------- */
+
+#hero {
+    background: var(--bg-hero);
+    color: var(--color-white);
+    padding: 200px 0 420px 0; /* ← unten jetzt riesiger Abstand */
+}
+
+#hero h1 {
+    font-size: var(--font-title);
+    max-width: 700px;
+}
+
+#hero h2 {
+    font-size: var(--font-subtitle);
+    margin-top: 10px;
+}
+
+#hero p {
+    margin-top: 25px;
+    font-size: 1.3rem;
+    max-width: 600px;
+}
+
+.cta-button {
+    margin-top: 60px;
+    margin-bottom: 80px; /* ← zusätzlicher Abstand */
+    padding: 16px 36px;
+    background: var(--color-red);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.cta-button:hover {
+    background: #A00022;
+}
+
+/* ---------------------------------------------------
+   SECTION BACKGROUNDS
+--------------------------------------------------- */
+
+#ausgangslage { background: var(--bg-ausgangslage); }
+#uhp-team { background: var(--bg-ziel); }
+#benefits-athleten { background: var(--bg-benefits-athleten); }
+#benefits-schweiz { background: var(--bg-benefits-ch); }
+#partner { background: var(--bg-partners); color: white; }
+#kontakt { background: var(--color-white); }
+
+/* ---------------------------------------------------
+   ATHLETEN-KARTEN
+--------------------------------------------------- */
+
+.athlete-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.athlete {
+    background: var(--color-white);
+    border: 2px solid var(--color-black);
+    padding: 25px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.athlete:hover {
+    transform: translateY(-6px);
+}
+
+/* ---------------------------------------------------
+   PARTNER
+--------------------------------------------------- */
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.partner {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 6px;
+    border: 2px solid white;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.partner:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ---------------------------------------------------
+   FORMULAR
+--------------------------------------------------- */
+
+form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 2px solid var(--color-black);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 140px;
+}
+
+button {
+    padding: 14px;
+    background: var(--color-red);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #A00022;
+}
+
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+
+footer {
+    background: var(--bg-footer);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: var(--color-red);
+}
